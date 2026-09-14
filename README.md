@@ -4,16 +4,18 @@ Object tracking got its first update since it arrived in visionOS 2 – the impr
 1. High frame rate tracking
 2. An extended training mode in Create ML which results in more accurate tracking
 3. A metric pose for use cases that need the highest accuracy
-4. Better (and faster-trained) `.referenceobject` files when using macOS 27
+4. Better (and faster-trained) `.referenceobject` files when using macOS 27's Create ML
 5. Object tracking is now available on iOS
 
 This repo serves as a demo of 1, 2, 4, and 5 above to make an app that lets the Apple Vision Pro serve as my eyes so I can complete a task blind.
 
 <!-- YouTube: The full demo video with sound is [here](YOUTUBE_URL). -->
 
-<!-- Demo clip goes here: drag object-tracking-updates.mp4 into GitHub's README editor and paste the user-attachments URL on its own line. -->
-
 The write-up, with the training numbers and lots more details on what I found, is [over here](https://vision.engineer/posts/object-tracking-updates-in-visionOS-27-and-iOS-27/).
+
+Here's a clip of the demo:
+
+![visionOS 27 iOS 27 Object Tracking Demo Clip](https://github.com/user-attachments/assets/ece7f220-3d0d-4f6c-b6b3-cd9dc2ef3a62)
 
 **Comparison of standard vs. high frame rate tracking:** I used the 2% blue milk carton and the full fat red milk carton to compare the old standard-rate tracking vs. the new high frame rate tracking. The blue milk carton is a two-year-old reference object from my [visionOS 2 demo](https://github.com/robomex/visionOS-2-Object-Tracking-Demo), loaded at the default rate. The red milk carton is trained with macOS 27's Create ML in extended mode and loaded with high frame rate tracking. Same kind of object, same table, and a semitransparent overlay on each to make the differences more obvious. The blue milk carton is effectively a worst-case scenario (macOS 15 trainer, standard training mode, trained on all angles, standard frame rate tracking) vs. the red milk carton's best-case scenario (macOS 27 trainer, extended training mode, trained on upright angles, high frame rate tracking).
 
@@ -32,11 +34,12 @@ The write-up, with the training numbers and lots more details on what I found, i
 
 ## Build
 1. Choose your Apple Developer account in Signing & Capabilities (the bundle identifier appends your team ID to prevent collisions)
-2. Build and run on the iPhone, then on the Vision Pro
+2. Build and run on the iPhone
+3. Build and run on the Vision Pro
 
 ## Run
-1. Launch both apps. They find each other over Bonjour and peer-to-peer Wi-Fi; the two devices don't need to be on the same network. The first connection trusts the other device's certificate and pins it.
-2. The Vision Pro will automatically enter an immersive space. Point both devices at the red milk carton and hold still for a second to calibrate the devices.
+1. Launch both apps. 
+2. Point both devices at the red milk carton and hold still for a second to calibrate the devices.
 3. On the iPhone, press and hold an item in the carousel and drag it onto the table. Three items make the meal, in the order you drop them.
 4. On the Vision Pro, close your eyes and follow the sound. A low pulsing tone plays from the item you're after, faster and higher as your hand gets close; a sting plays when you touch it. Pick it up and a brighter tone plays from where it needs to be placed, faster and higher as you near it. The placement tone holds steady for a second when the object is correctly placed, then a chime plays. A soft tick means the Vision Pro can't see the item or your hand right now.
 
