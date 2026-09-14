@@ -9,7 +9,7 @@ Object tracking got its first update since it arrived in visionOS 2 – the impr
 
 This repo serves as a demo of 1, 2, 4, and 5 above to make an app that lets the Apple Vision Pro serve as my eyes so I can complete a task blind.
 
-<!-- YouTube: The full demo video with sound is [here](YOUTUBE_URL). -->
+The full demo video with sound is [here](https://youtu.be/j4cPzciaW-I).
 
 The write-up, with the training numbers and lots more details on what I found, is [over here](https://vision.engineer/posts/object-tracking-updates-in-visionOS-27-and-iOS-27/).
 
