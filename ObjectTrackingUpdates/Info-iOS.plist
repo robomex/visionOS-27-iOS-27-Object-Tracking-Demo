@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_otu-demo._udp</string>
+	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>The iPhone and Apple Vision Pro sides of this demo find each other and talk over your local network.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>The app uses the camera to find and track the demo objects.</string>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict/>
+	</dict>
+</dict>
+</plist>
